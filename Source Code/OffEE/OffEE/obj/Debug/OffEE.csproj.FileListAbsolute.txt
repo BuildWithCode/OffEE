@@ -1,0 +1,9 @@
+c:\users\newlife.owner-pc\documents\visual studio 2013\Projects\OffEE\OffEE\bin\Debug\OffEE.exe.config
+c:\users\newlife.owner-pc\documents\visual studio 2013\Projects\OffEE\OffEE\bin\Debug\OffEE.exe
+c:\users\newlife.owner-pc\documents\visual studio 2013\Projects\OffEE\OffEE\bin\Debug\OffEE.pdb
+c:\users\newlife.owner-pc\documents\visual studio 2013\Projects\OffEE\OffEE\obj\Debug\OffEE.csprojResolveAssemblyReference.cache
+c:\users\newlife.owner-pc\documents\visual studio 2013\Projects\OffEE\OffEE\obj\Debug\OffEE.Form1.resources
+c:\users\newlife.owner-pc\documents\visual studio 2013\Projects\OffEE\OffEE\obj\Debug\OffEE.Properties.Resources.resources
+c:\users\newlife.owner-pc\documents\visual studio 2013\Projects\OffEE\OffEE\obj\Debug\OffEE.csproj.GenerateResource.Cache
+c:\users\newlife.owner-pc\documents\visual studio 2013\Projects\OffEE\OffEE\obj\Debug\OffEE.exe
+c:\users\newlife.owner-pc\documents\visual studio 2013\Projects\OffEE\OffEE\obj\Debug\OffEE.pdb
