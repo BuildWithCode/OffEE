@@ -1,0 +1,32 @@
+C:\Users\SirJosh3917\Documents\Visual Studio 2013\Projects\Off EE\Off EE\bin\Windows\Off EE.exe.config
+C:\Users\SirJosh3917\Documents\Visual Studio 2013\Projects\Off EE\Off EE\bin\Windows\Off EE.exe
+C:\Users\SirJosh3917\Documents\Visual Studio 2013\Projects\Off EE\Off EE\bin\Windows\Off EE.pdb
+C:\Users\SirJosh3917\Documents\Visual Studio 2013\Projects\Off EE\Off EE\bin\Windows\Mod.dll
+C:\Users\SirJosh3917\Documents\Visual Studio 2013\Projects\Off EE\Off EE\bin\Windows\MonoGame.Framework.dll
+C:\Users\SirJosh3917\Documents\Visual Studio 2013\Projects\Off EE\Off EE\bin\Windows\System.Data.Linq.dll
+C:\Users\SirJosh3917\Documents\Visual Studio 2013\Projects\Off EE\Off EE\bin\Windows\System.dll
+C:\Users\SirJosh3917\Documents\Visual Studio 2013\Projects\Off EE\Off EE\bin\Windows\System.Drawing.dll
+C:\Users\SirJosh3917\Documents\Visual Studio 2013\Projects\Off EE\Off EE\bin\Windows\System.Xml.dll
+C:\Users\SirJosh3917\Documents\Visual Studio 2013\Projects\Off EE\Off EE\bin\Windows\SharpDX.MediaFoundation.dll
+C:\Users\SirJosh3917\Documents\Visual Studio 2013\Projects\Off EE\Off EE\bin\Windows\SharpDX.dll
+C:\Users\SirJosh3917\Documents\Visual Studio 2013\Projects\Off EE\Off EE\bin\Windows\SharpDX.XAudio2.dll
+C:\Users\SirJosh3917\Documents\Visual Studio 2013\Projects\Off EE\Off EE\bin\Windows\SharpDX.Direct3D11.dll
+C:\Users\SirJosh3917\Documents\Visual Studio 2013\Projects\Off EE\Off EE\bin\Windows\SharpDX.DXGI.dll
+C:\Users\SirJosh3917\Documents\Visual Studio 2013\Projects\Off EE\Off EE\bin\Windows\SharpDX.Direct2D1.dll
+C:\Users\SirJosh3917\Documents\Visual Studio 2013\Projects\Off EE\Off EE\bin\Windows\SharpDX.XInput.dll
+C:\Users\SirJosh3917\Documents\Visual Studio 2013\Projects\Off EE\Off EE\bin\Windows\SharpDX.RawInput.dll
+C:\Users\SirJosh3917\Documents\Visual Studio 2013\Projects\Off EE\Off EE\bin\Windows\SharpDX.Direct3D9.dll
+C:\Users\SirJosh3917\Documents\Visual Studio 2013\Projects\Off EE\Off EE\bin\Windows\Mod.pdb
+C:\Users\SirJosh3917\Documents\Visual Studio 2013\Projects\Off EE\Off EE\bin\Windows\MonoGame.Framework.xml
+C:\Users\SirJosh3917\Documents\Visual Studio 2013\Projects\Off EE\Off EE\bin\Windows\SharpDX.MediaFoundation.xml
+C:\Users\SirJosh3917\Documents\Visual Studio 2013\Projects\Off EE\Off EE\bin\Windows\SharpDX.xml
+C:\Users\SirJosh3917\Documents\Visual Studio 2013\Projects\Off EE\Off EE\bin\Windows\SharpDX.XAudio2.xml
+C:\Users\SirJosh3917\Documents\Visual Studio 2013\Projects\Off EE\Off EE\bin\Windows\SharpDX.Direct3D11.xml
+C:\Users\SirJosh3917\Documents\Visual Studio 2013\Projects\Off EE\Off EE\bin\Windows\SharpDX.DXGI.xml
+C:\Users\SirJosh3917\Documents\Visual Studio 2013\Projects\Off EE\Off EE\bin\Windows\SharpDX.Direct2D1.xml
+C:\Users\SirJosh3917\Documents\Visual Studio 2013\Projects\Off EE\Off EE\bin\Windows\SharpDX.XInput.xml
+C:\Users\SirJosh3917\Documents\Visual Studio 2013\Projects\Off EE\Off EE\bin\Windows\SharpDX.RawInput.xml
+C:\Users\SirJosh3917\Documents\Visual Studio 2013\Projects\Off EE\Off EE\bin\Windows\SharpDX.Direct3D9.xml
+C:\Users\SirJosh3917\Documents\Visual Studio 2013\Projects\Off EE\Off EE\obj\x86\Debug\Off EE.csprojResolveAssemblyReference.cache
+C:\Users\SirJosh3917\Documents\Visual Studio 2013\Projects\Off EE\Off EE\obj\x86\Debug\Off EE.exe
+C:\Users\SirJosh3917\Documents\Visual Studio 2013\Projects\Off EE\Off EE\obj\x86\Debug\Off EE.pdb

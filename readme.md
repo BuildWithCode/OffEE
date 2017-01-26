@@ -1,4 +1,5 @@
 # Off EE
-Hello! Feel free to well, view the project, edit it, or something.
+Off EE - Out of beta testing phase ( but silently )
 
-# NOTICE: This current code isn't the revamp code.
+New Off EE allows for a scrollable world with editable blocks, saveable blocks, and more ( no not much more )
+I couldn't continue developin this alone so I silently set it free.

@@ -1,0 +1,27 @@
+C:\Users\NewLife.owner-PC\Documents\Visual Studio 2013\Projects\Off EE\test mod\obj\Debug\test mod.csprojResolveAssemblyReference.cache
+C:\Users\NewLife.owner-PC\Documents\Visual Studio 2013\Projects\Off EE\test mod\bin\Debug\test mod.dll
+C:\Users\NewLife.owner-PC\Documents\Visual Studio 2013\Projects\Off EE\test mod\bin\Debug\test mod.pdb
+C:\Users\NewLife.owner-PC\Documents\Visual Studio 2013\Projects\Off EE\test mod\bin\Debug\Off EE.exe
+C:\Users\NewLife.owner-PC\Documents\Visual Studio 2013\Projects\Off EE\test mod\bin\Debug\MonoGame.Framework.dll
+C:\Users\NewLife.owner-PC\Documents\Visual Studio 2013\Projects\Off EE\test mod\bin\Debug\SharpDX.MediaFoundation.dll
+C:\Users\NewLife.owner-PC\Documents\Visual Studio 2013\Projects\Off EE\test mod\bin\Debug\SharpDX.dll
+C:\Users\NewLife.owner-PC\Documents\Visual Studio 2013\Projects\Off EE\test mod\bin\Debug\SharpDX.XAudio2.dll
+C:\Users\NewLife.owner-PC\Documents\Visual Studio 2013\Projects\Off EE\test mod\bin\Debug\SharpDX.DXGI.dll
+C:\Users\NewLife.owner-PC\Documents\Visual Studio 2013\Projects\Off EE\test mod\bin\Debug\SharpDX.Direct3D11.dll
+C:\Users\NewLife.owner-PC\Documents\Visual Studio 2013\Projects\Off EE\test mod\bin\Debug\SharpDX.Direct2D1.dll
+C:\Users\NewLife.owner-PC\Documents\Visual Studio 2013\Projects\Off EE\test mod\bin\Debug\SharpDX.XInput.dll
+C:\Users\NewLife.owner-PC\Documents\Visual Studio 2013\Projects\Off EE\test mod\bin\Debug\SharpDX.RawInput.dll
+C:\Users\NewLife.owner-PC\Documents\Visual Studio 2013\Projects\Off EE\test mod\bin\Debug\SharpDX.Direct3D9.dll
+C:\Users\NewLife.owner-PC\Documents\Visual Studio 2013\Projects\Off EE\test mod\bin\Debug\Off EE.pdb
+C:\Users\NewLife.owner-PC\Documents\Visual Studio 2013\Projects\Off EE\test mod\bin\Debug\MonoGame.Framework.xml
+C:\Users\NewLife.owner-PC\Documents\Visual Studio 2013\Projects\Off EE\test mod\bin\Debug\SharpDX.MediaFoundation.xml
+C:\Users\NewLife.owner-PC\Documents\Visual Studio 2013\Projects\Off EE\test mod\bin\Debug\SharpDX.xml
+C:\Users\NewLife.owner-PC\Documents\Visual Studio 2013\Projects\Off EE\test mod\bin\Debug\SharpDX.XAudio2.xml
+C:\Users\NewLife.owner-PC\Documents\Visual Studio 2013\Projects\Off EE\test mod\bin\Debug\SharpDX.DXGI.xml
+C:\Users\NewLife.owner-PC\Documents\Visual Studio 2013\Projects\Off EE\test mod\bin\Debug\SharpDX.Direct3D11.xml
+C:\Users\NewLife.owner-PC\Documents\Visual Studio 2013\Projects\Off EE\test mod\bin\Debug\SharpDX.Direct2D1.xml
+C:\Users\NewLife.owner-PC\Documents\Visual Studio 2013\Projects\Off EE\test mod\bin\Debug\SharpDX.XInput.xml
+C:\Users\NewLife.owner-PC\Documents\Visual Studio 2013\Projects\Off EE\test mod\bin\Debug\SharpDX.RawInput.xml
+C:\Users\NewLife.owner-PC\Documents\Visual Studio 2013\Projects\Off EE\test mod\bin\Debug\SharpDX.Direct3D9.xml
+C:\Users\NewLife.owner-PC\Documents\Visual Studio 2013\Projects\Off EE\test mod\obj\Debug\test mod.dll
+C:\Users\NewLife.owner-PC\Documents\Visual Studio 2013\Projects\Off EE\test mod\obj\Debug\test mod.pdb

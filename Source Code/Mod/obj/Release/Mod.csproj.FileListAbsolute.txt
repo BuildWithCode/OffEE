@@ -1,0 +1,5 @@
+C:\Users\NewLife.owner-PC\Documents\Visual Studio 2013\Projects\Off EE\Mod\bin\Release\Mod.dll
+C:\Users\NewLife.owner-PC\Documents\Visual Studio 2013\Projects\Off EE\Mod\bin\Release\Mod.pdb
+C:\Users\NewLife.owner-PC\Documents\Visual Studio 2013\Projects\Off EE\Mod\obj\Release\Mod.csprojResolveAssemblyReference.cache
+C:\Users\NewLife.owner-PC\Documents\Visual Studio 2013\Projects\Off EE\Mod\obj\Release\Mod.dll
+C:\Users\NewLife.owner-PC\Documents\Visual Studio 2013\Projects\Off EE\Mod\obj\Release\Mod.pdb

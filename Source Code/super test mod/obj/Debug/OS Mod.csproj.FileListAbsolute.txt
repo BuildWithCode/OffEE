@@ -1,0 +1,5 @@
+C:\Users\NewLife.owner-PC\Documents\Visual Studio 2013\Projects\Off EE\Off EE\bin\Windows\Debug\mods\super test mod.dll
+C:\Users\NewLife.owner-PC\Documents\Visual Studio 2013\Projects\Off EE\Off EE\bin\Windows\Debug\mods\super test mod.pdb
+C:\Users\NewLife.owner-PC\Documents\Visual Studio 2013\Projects\Off EE\super test mod\obj\Debug\OS Mod.csprojResolveAssemblyReference.cache
+C:\Users\NewLife.owner-PC\Documents\Visual Studio 2013\Projects\Off EE\super test mod\obj\Debug\super test mod.dll
+C:\Users\NewLife.owner-PC\Documents\Visual Studio 2013\Projects\Off EE\super test mod\obj\Debug\super test mod.pdb

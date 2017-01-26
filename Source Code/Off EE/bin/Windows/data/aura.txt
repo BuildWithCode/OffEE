@@ -1,0 +1,13 @@
+Use this to color your aura.
+brownwhiteorangered
+^^^^^
+Change this line to change your aura
+The following colors are valid:
+white
+black
+brown
+orange
+red
+yellow
+blue
+cyan
