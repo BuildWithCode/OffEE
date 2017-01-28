@@ -3,3 +3,8 @@ C:\Users\NewLife.owner-PC\Documents\Visual Studio 2013\Projects\Off EE\Off EE\bi
 C:\Users\NewLife.owner-PC\Documents\Visual Studio 2013\Projects\Off EE\super test mod\obj\Debug\Mod Test Thingy.csprojResolveAssemblyReference.cache
 C:\Users\NewLife.owner-PC\Documents\Visual Studio 2013\Projects\Off EE\super test mod\obj\Debug\super test mod.dll
 C:\Users\NewLife.owner-PC\Documents\Visual Studio 2013\Projects\Off EE\super test mod\obj\Debug\super test mod.pdb
+C:\Users\MarcoAntonio\Desktop\OffEE-master\Source Code\super test mod\obj\Debug\Mod Test Thingy.csprojResolveAssemblyReference.cache
+C:\Users\MarcoAntonio\Desktop\OffEE-master\Source Code\super test mod\obj\Debug\super test mod.dll
+C:\Users\MarcoAntonio\Desktop\OffEE-master\Source Code\super test mod\obj\Debug\super test mod.pdb
+C:\Users\MarcoAntonio\Desktop\OffEE-master\Source Code\Off EE\bin\Windows\Debug\mods\super test mod.dll
+C:\Users\MarcoAntonio\Desktop\OffEE-master\Source Code\Off EE\bin\Windows\Debug\mods\super test mod.pdb

@@ -61,16 +61,34 @@ namespace Mod
 				});
 		}
 
-		public static void Chat(string msg, Service User)
-		{
-			if (!ModLoader.ModsStopped)
-				System.Threading.Tasks.Task.Factory.StartNew(() =>
-				{
-					while (Busy) { /**/ }
+        public static void Chat(string msg, Service User, string disguise = "")
+        {
+            disguise = User.ServiceUser.Name();
 
-					Tasks_.Add(new Task("Chat", "* " + (User.SystemRights ? "SYSTEM" : User.ServiceUser.ModName()) + " > " + msg));
-				});
-		}
+            if (User.SystemRights)
+            {
+                if (!ModLoader.ModsStopped)
+                    System.Threading.Tasks.Task.Factory.StartNew(() =>
+                    {
+                        while (Busy) { /**/ }
+
+                        Tasks_.Add(new Task("Chat", "* " + disguise + " > " + msg));
+                    });
+            }
+            else
+                Chat("ERROR: Cannot chat as SYSTEM: No priviledges.", new Service(true, new IModSystem()));
+        }
+
+        public static void SystemChat(string msg, Service User)
+        {
+            if (!ModLoader.ModsStopped)
+                System.Threading.Tasks.Task.Factory.StartNew(() =>
+                {
+                    while (Busy) { /**/ }
+
+                    Tasks_.Add(new Task("Chat", "* SYSTEM > " + msg));
+                });
+        }
 
 		public static void PlaceBlock(int layer, int x, int y, int id, Service User)
 		{
@@ -79,7 +97,7 @@ namespace Mod
 				{
 					while (Busy) { /**/ }
 
-					Tasks_.Add(new Task("PlaceBlock", layer, x, y, id, (User.SystemRights ? "SYSTEM" : User.ServiceUser.ModName())));
+					Tasks_.Add(new Task("PlaceBlock", layer, x, y, id, (User.SystemRights ? "SYSTEM" : User.ServiceUser.Name())));
 				});
 		}
 
@@ -164,11 +182,17 @@ namespace Mod
 				ServiceHandler.SetHotbarBlock(slot, block, this);
 		}
 
-		public void Chat(string msg)
+		public void Chat(string msg, string disguise = "")
 		{
 			if (!ModLoader.ModsStopped)
-				ServiceHandler.Chat(msg, this);
+				ServiceHandler.Chat(msg, this, disguise);
 		}
+
+        public void SystemChat(string msg)
+        {
+            if (!ModLoader.ModsStopped)
+                ServiceHandler.SystemChat(msg, this);
+        }
 
 		public void PlaceBlock(int layer, int x, int y, int id)
 		{

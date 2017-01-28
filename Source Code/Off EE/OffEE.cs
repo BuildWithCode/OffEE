@@ -72,8 +72,9 @@ namespace Off_EE
 		public StreamWriter
 			LogFile;
 
-		public Mod.IMod
-			LastSysReq;
+        public Mod.IMod
+            LastSysReq,
+            LastPermReq;
 
 		public string
 			LogName = "";
@@ -525,50 +526,109 @@ namespace Off_EE
 
 			player.Tick();
 
-			#region Enable/Disable System Privledged Mods
+            #region Enable/Disable System Priviledged Mods
 
-			if (Mod.ModLoader.HasSystemRequests)
-			{
-				IMod i = Mod.ModLoader.SystemRequests()[0];
+            if (Mod.ModLoader.HasSystemRequests)
+            {
+                IMod i = Mod.ModLoader.SystemRequests()[0];
 
-				if (LastSysReq != i)
-				{
-					LastSysReq = i;
-					ServiceHandler.Chat("CAUTION: The mod " + i.ModName() + " version " + i.Version() + ", by " + i.Author() + @" requests system privledges. System Privledges allows mods to: Record Key strokes ( if you're in focus of the application ) Edit raw world data Draw any picture at any location of the game screen And not only that, but malicous mods can spread their system rights across to any other mods, so if you enable system rights for just that mod, thing again. Press 'Y' to enable, 'N' to disable.", Mod.ModLoader.GetSystemService(this, Mod.ModLoader.GetSystem(this)));
-				}
+                if (LastSysReq != i)
+                {
+                    LastSysReq = i;
+                    ServiceHandler.Chat("CAUTION: The mod '" + i.Name() + "' by '" + i.Author() + @"' requests system priviledges. System Priviledges allows mods to: Record Key strokes ( if you're in focus of the application ) Edit raw world data Draw any picture at any location of the game screen And not only that, but malicious mods can spread their system rights across to any other mods, so if you enable system rights for just that mod, think again. Press 'Y' to enable, 'N' to disable.", Mod.ModLoader.GetSystemService(this, Mod.ModLoader.GetSystem(this)));
+                }
 
-				if ((state.IsKeyDown(Keys.Y) ||
-					state.IsKeyDown(Keys.N)) &&
-					CanRun)
-				{
-					if (state.IsKeyDown(Keys.Y))
-					{
-						i.SystemPrivledgesGiven(Mod.ModLoader.GetSystemService(this, i));
+                if ((state.IsKeyDown(Keys.Y) ||
+                    state.IsKeyDown(Keys.N)) &&
+                    CanRun)
+                {
+                    if (state.IsKeyDown(Keys.Y))
+                    {
+                        i.SystemPriviledgesGiven();
 
-						ServiceHandler.Chat("System Privledges Granted.", Mod.ModLoader.GetSystemService(this, Mod.ModLoader.GetSystem(this)));
-					}
-					else if (state.IsKeyDown(Keys.N))
-					{
-						i.SystemPrivledgesDenied();
+                        ServiceHandler.Chat("System Priviledges Granted.", Mod.ModLoader.GetSystemService(this, Mod.ModLoader.GetSystem(this)));
+                    }
+                    else if (state.IsKeyDown(Keys.N))
+                    {
+                        i.SystemPriviledgesDenied();
 
-						ServiceHandler.Chat("System Privledges Denied.", Mod.ModLoader.GetSystemService(this, Mod.ModLoader.GetSystem(this)));
-					}
+                        ServiceHandler.Chat("System Priviledges Denied.", Mod.ModLoader.GetSystemService(this, Mod.ModLoader.GetSystem(this)));
+                    }
 
-					i.Init();
+                    i.ReInit(Mod.ModLoader.GetSystemService(this, Mod.ModLoader.GetSystem(this)));
 
-					CanRun = false;
+                    CanRun = false;
 
-					System.Threading.Tasks.Task.Factory.StartNew((() =>
-					{
-						while (state.IsKeyDown(Keys.Y) || state.IsKeyDown(Keys.N)) { } //Wait for the user to quit pressing y/n
-						CanRun = true;
-					}));
+                    System.Threading.Tasks.Task.Factory.StartNew((() =>
+                    {
+                        while (state.IsKeyDown(Keys.Y) || state.IsKeyDown(Keys.N)) { } //Wait for the user to quit pressing y/n
+                        CanRun = true;
+                    }));
 
-					Mod.ModLoader.SystemRequests().RemoveAt(0);
-				}
-			}
+                    Mod.ModLoader.SystemRequests().RemoveAt(0);
+                }
+            }
 
-			#endregion
+            #endregion
+
+            #region Enable/Disable Custom Permissions Mods
+
+            if (Mod.ModLoader.HasPermissionRequests)
+            {
+                ModPermissionRequest p = Mod.ModLoader.PermissionRequests()[0];
+                IMod i = p.Mod;
+                string req = p.Request,
+                    answermsg = "";
+
+                bool LegalRun = true;
+
+                if (LastPermReq != i)
+                {
+                    LastPermReq = i;
+                    if (req == "Chat Disguise")
+                    {
+                        answermsg = "Chat Disguise Access";
+                        ServiceHandler.Chat("CAUTION: The mod '" + i.Name() + "' by '" + i.Author() + "' is requesting chat disguising permissions. This allows the mod to talk in chat with a name other than the mod's name. They could even chat as SYSTEM (with no power tho). Please think if you will accept or not. Press 'Y' to accept, 'N' to deny.", Mod.ModLoader.GetSystemService(this, Mod.ModLoader.GetSystem(this)));
+                    }
+                    else
+                    {
+                        LegalRun = false;
+                        ServiceHandler.Chat("The mod '" + i.Name() + "' by '" + i.Author() + "' has requested an invalid permission. (" + req + "). This request will be skipped.", Mod.ModLoader.GetSystemService(this, Mod.ModLoader.GetSystem(this)));
+                    }
+                }
+
+                if ((state.IsKeyDown(Keys.Y) ||
+                    state.IsKeyDown(Keys.N)) &&
+                    CanRun && LegalRun)
+                {
+                    if (state.IsKeyDown(Keys.Y))
+                    {
+                        i.PermissionGranted(req);
+
+                        ServiceHandler.Chat(answermsg + " Granted.", Mod.ModLoader.GetSystemService(this, Mod.ModLoader.GetSystem(this)));
+                    }
+                    else if (state.IsKeyDown(Keys.N))
+                    {
+                        i.PermissionDenied(req);
+
+                        ServiceHandler.Chat(answermsg + " Denied.", Mod.ModLoader.GetSystemService(this, Mod.ModLoader.GetSystem(this)));
+                    }
+
+                    i.ReInit(Mod.ModLoader.GetSystemService(this, Mod.ModLoader.GetSystem(this)));
+
+                    CanRun = false;
+
+                    System.Threading.Tasks.Task.Factory.StartNew((() =>
+                    {
+                        while (state.IsKeyDown(Keys.Y) || state.IsKeyDown(Keys.N)) { } //Wait for the user to quit pressing y/n
+                        CanRun = true;
+                    }));
+
+                    Mod.ModLoader.PermissionRequests().RemoveAt(0);
+                }
+            }
+
+            #endregion
 
 			foreach (var i in state.GetPressedKeys())
 			{

@@ -11,18 +11,25 @@ namespace Mod
 {
 	class IModSystem : IMod //Custom IMod to send * SYSTEM > <mod loaded> messages.
 	{
-		public string ModName() { return "SYSTEM"; }
-		public string Version() { return "SYSTEM"; }
-		public string Author() { return "SYSTEM"; }
+        public string Name() { return "SYSTEM"; }
+        public string Author() { return "SYSTEM"; }
+        public string Version() { return "SYSTEM";  }
+
 		Service service = null;
 
-		public bool RequestSystemPrivledges() { return false; }
+		public bool RequestSystemPriviledges() { return false; }
+        public bool RequestsChatDisguise() { return false; }
 
-		public void SystemPrivledgesGiven(Service n) { }
-		public void SystemPrivledgesDenied() { }
+		public void SystemPriviledgesGiven() { }
+		public void SystemPriviledgesDenied() { }
+        public void PermissionGranted(string Permission) { }
+        public void PermissionDenied(string Permission) { }
 		public void LoadCustomItems() { }
 
-		public void Init() { }
+        public void Init(Service serv) { this.service = serv; }
+
+        public void ReInit(Service serv) { this.service = serv; }
+
 		public void Stop() { }
 	}
 
@@ -105,34 +112,32 @@ namespace Mod
 					Service s = new Service(l);
 					foreach (var x in ts)
 					{
-						try
-						{
-							IMod i = (IMod)x;
-							ModsLoaded.Add(i);
+                        try
+                        {
+                            IMod i = (IMod)x;
+                            ModsLoaded.Add(i);
 
-							if (i.RequestSystemPrivledges())
-							{
-								SysReq.Add(i);
-							}
-							else
-							{
-								if (!(i.ModName() == "SYSTEM" &&
-									i.Author() == "SYSTEM" &&
-									i.Version() == "SYSTEM"))
-								{
-									if (i.ModName() == "User" || i.ModName() == "SYSTEM")
-									{
-										ServiceHandler.Chat("WARNING: Mod " + i.ModName() + " version " + i.Version() + ", by " + i.Author() + " will not be loaded because they're using an invalid ModName ( \"User\", \"SYSTEM\" )", s);
-									}
-									else
-									{
-										i.Init();
-										ServiceHandler.Chat("Loaded: " + i.ModName() + " version " + i.Version() + ", by " + i.Author(), s);
-									}
-								}
-							}
-						}
-						catch { }
+                            if (i.RequestSystemPriviledges())
+                                SysReq.Add(i);
+                            if (i.RequestsChatDisguise())
+                                PermReq.Add(new ModPermissionRequest(i, "Chat Disguise"));
+
+                            if (!(i.Name() == "SYSTEM" &&
+                                i.Author() == "SYSTEM" &&
+                                i.Version() == "SYSTEM"))
+                            {
+                                if (i.Name() == "User" || i.Name() == "SYSTEM")
+                                {
+                                    ServiceHandler.Chat("WARNING: Mod '" + i.Name() + "' by '" + i.Author() + "' will not be loaded because they're using an invalid ModName ( \"User\", \"SYSTEM\" )", s);
+                                }
+                                else
+                                {
+                                    i.Init(s);
+                                    ServiceHandler.Chat("Loaded: '" + i.Name() + "' by '" + i.Author() + "'", s);
+                                }
+                            }
+                        }
+                        catch { }
 					}
 				}
 			}
@@ -157,20 +162,27 @@ namespace Mod
 		public static bool ModsStopped { get; set; }
 
 		private static List<IMod> SysReq = new List<IMod>();
+        private static List<ModPermissionRequest> PermReq = new List<ModPermissionRequest>();
 
 		public static List<IMod> SystemRequests()
 		{
 			return SysReq;
 		}
 
-		public static bool HasSystemRequests
-		{
-			get { return SysReq.Count > 0; }
-			set
-			{
+        public static List<ModPermissionRequest> PermissionRequests()
+        {
+            return PermReq;
+        }
 
-			}
-		}
+        public static bool HasSystemRequests
+        {
+            get { return SysReq.Count > 0; }
+        }
+
+        public static bool HasPermissionRequests
+        {
+            get { return PermReq.Count > 0; }
+        }
 
 		public static IMod GetSystem(object master)
 		{
@@ -188,4 +200,19 @@ namespace Mod
 			return new Service(true, giveSystem);
 		}
 	}
+
+    public class ModPermissionRequest
+    {
+        private string request = "";
+        private IMod mod;
+
+        public string Request { get { return request; } }
+        public IMod Mod { get { return mod; } }
+
+        public ModPermissionRequest(IMod mod, string request)
+        {
+            this.mod = mod;
+            this.request = request;
+        }
+    }
 }

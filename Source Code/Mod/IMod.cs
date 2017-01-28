@@ -8,17 +8,21 @@ namespace Mod
 {
 	public interface IMod
 	{
-		string ModName();
-		string Author();
-		string Version();
+        string Name();
+        string Author();
+        string Version();
 
-		bool RequestSystemPrivledges();
+        bool RequestSystemPriviledges();
+        bool RequestsChatDisguise();
 
-		void SystemPrivledgesGiven(Service service);
-		void SystemPrivledgesDenied();
+		void SystemPriviledgesGiven();
+		void SystemPriviledgesDenied();
+        void PermissionGranted(string perm);
+        void PermissionDenied(string perm);
 
 		void LoadCustomItems();
-		void Init();
+		void Init(Service serv);
+        void ReInit(Service serv);
 		void Stop();
 	}
 }
