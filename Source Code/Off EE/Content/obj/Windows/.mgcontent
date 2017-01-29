@@ -4,7 +4,6 @@
   <Platform>Windows</Platform>
   <Config />
   <SourceFiles>
-    <File>C:/Users/NewLife.owner-PC/Documents/Visual Studio 2013/Projects/Off EE/Off EE/Content/chat.spritefont</File>
-    <File>C:/Users/NewLife.owner-PC/Documents/Visual Studio 2013/Projects/Off EE/Off EE/Content/visitor.spritefont</File>
+    <File>C:/Users/MarcoAntonio/Desktop/OffEE/Source Code/Off EE/Content/chat.spritefont</File>
   </SourceFiles>
 </SourceFileCollection>

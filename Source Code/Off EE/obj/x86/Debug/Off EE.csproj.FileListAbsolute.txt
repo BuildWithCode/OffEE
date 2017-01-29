@@ -30,3 +30,9 @@ C:\Users\SirJosh3917\Documents\Visual Studio 2013\Projects\Off EE\Off EE\bin\Win
 C:\Users\SirJosh3917\Documents\Visual Studio 2013\Projects\Off EE\Off EE\obj\x86\Debug\Off EE.csprojResolveAssemblyReference.cache
 C:\Users\SirJosh3917\Documents\Visual Studio 2013\Projects\Off EE\Off EE\obj\x86\Debug\Off EE.exe
 C:\Users\SirJosh3917\Documents\Visual Studio 2013\Projects\Off EE\Off EE\obj\x86\Debug\Off EE.pdb
+C:\Users\MarcoAntonio\Desktop\OffEE-master\Source Code\Off EE\bin\Windows\Off EE.exe.config
+C:\Users\MarcoAntonio\Desktop\OffEE-master\Source Code\Off EE\obj\x86\Debug\Off EE.exe
+C:\Users\MarcoAntonio\Desktop\OffEE-master\Source Code\Off EE\obj\x86\Debug\Off EE.pdb
+C:\Users\MarcoAntonio\Desktop\OffEE\Source Code\Off EE\bin\Windows\Off EE.exe.config
+C:\Users\MarcoAntonio\Desktop\OffEE\Source Code\Off EE\obj\x86\Debug\Off EE.exe
+C:\Users\MarcoAntonio\Desktop\OffEE\Source Code\Off EE\obj\x86\Debug\Off EE.pdb

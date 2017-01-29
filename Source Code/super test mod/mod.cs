@@ -8,41 +8,52 @@ using Mod.CustomPoint;
 
 namespace super_test_mod
 {
-	public class test : IMod
-	{
-		public string Version() { return "1.0.0"; }
-		public string Author() { return "mod author"; }
-		public string ModName() { return "mod"; }
+    public class test : IMod
+    {
+        public string Version() { return "1.0.0"; }
+        public string Author() { return "modauthor"; }
+        public string Name() { return "mod"; }
 
-		public bool HasSystemPrivledges = false;
-		public Service s;
-		
-		//We don't need system privledges
-		public bool RequestSystemPrivledges() { return true; }
-		public void SystemPrivledgesGiven(Service systemPrivledgesGiven) { s = systemPrivledgesGiven; HasSystemPrivledges = true; }
-		public void SystemPrivledgesDenied() {
+        public bool HasSystemPriviledges = false;
 
-			s = new Service(this);
-			s.Chat( "y u no sys privledge);" );
-		}
+        public Service s;
 
-		public void LoadCustomItems() {  } //Not programmed yet
+        //We don't need system priviledges; but let's do them anyways
+        public bool RequestSystemPriviledges() { return true; }
+        public bool RequestsChatDisguise() { return false; }
 
-		public void Stop() {  }
+        public void SystemPriviledgesGiven() { HasSystemPriviledges = true; }
+        public void SystemPriviledgesDenied()
+        {
+            s = new Service(this);
+            s.Chat("y u no sys privledge");
+        }
 
-		public void Init()
-		{
-			Events.OnBlockPlaced += Event_BlockPlaced;
-		}
+        public void PermissionGranted(string Perm) { }
+        public void PermissionDenied(string Perm) { }
 
-		private void Event_BlockPlaced(BlockPlacedArgs e)
-		{
-			s.PlaceBlock(e.layer, e.location.X, e.location.Y, e.id + 1);
-			if(HasSystemPrivledges)
-			{
-				s.Chat("ha im system");
-			}
-		}
+        public void LoadCustomItems() { } //Not programmed yet
 
-	}
+        public void Stop() { }
+
+        public void Init(Service serv)
+        {
+            this.s = serv; // Initialize service
+            Events.OnBlockPlaced += Event_BlockPlaced;
+        }
+
+        public void ReInit(Service serv)
+        {
+
+        }
+
+        private void Event_BlockPlaced(BlockPlacedArgs e)
+        {
+            s.PlaceBlock(e.layer, e.location.X, e.location.Y, e.id + 1);
+            if (HasSystemPriviledges)
+            {
+                s.SystemChat("hoi system priviledge arooay!");
+            }
+        }
+    }
 }

@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <SourceFile>C:/Users/SirJosh3917/Documents/Visual Studio 2013/Projects/Off EE/Off EE/Content/chat.spritefont</SourceFile>
-  <SourceTime>2016-09-12T11:08:41.1857324-04:00</SourceTime>
-  <DestFile>C:/Users/SirJosh3917/Documents/Visual Studio 2013/Projects/Off EE/Off EE/Content/bin/Windows/chat.xnb</DestFile>
-  <DestTime>2017-01-25T20:39:38.4399-05:00</DestTime>
+  <SourceFile>C:/Users/MarcoAntonio/Desktop/OffEE/Source Code/Off EE/Content/chat.spritefont</SourceFile>
+  <SourceTime>2017-01-25T18:17:48-01:00</SourceTime>
+  <DestFile>C:/Users/MarcoAntonio/Desktop/OffEE/Source Code/Off EE/Content/bin/Windows/chat.xnb</DestFile>
+  <DestTime>2017-01-29T10:18:36.3225996-01:00</DestTime>
   <Importer>FontDescriptionImporter</Importer>
-  <ImporterTime>2015-03-15T23:01:46-04:00</ImporterTime>
+  <ImporterTime>2016-03-30T06:36:08+00:00</ImporterTime>
   <Processor>FontDescriptionProcessor</Processor>
-  <ProcessorTime>2015-03-15T23:01:46-04:00</ProcessorTime>
+  <ProcessorTime>2016-03-30T06:36:08+00:00</ProcessorTime>
   <Parameters>
     <Key>TextureFormat</Key>
     <Value>Compressed</Value>
