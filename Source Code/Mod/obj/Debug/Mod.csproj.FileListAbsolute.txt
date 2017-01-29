@@ -13,3 +13,8 @@ C:\Users\MarcoAntonio\Desktop\OffEE-master\Source Code\Mod\obj\Debug\Mod.dll
 C:\Users\MarcoAntonio\Desktop\OffEE-master\Source Code\Mod\obj\Debug\Mod.pdb
 C:\Users\MarcoAntonio\Desktop\OffEE-master\Source Code\Mod\bin\Debug\Mod.dll
 C:\Users\MarcoAntonio\Desktop\OffEE-master\Source Code\Mod\bin\Debug\Mod.pdb
+C:\Users\MarcoAntonio\Desktop\OffEE\Source Code\Mod\bin\Debug\Mod.dll
+C:\Users\MarcoAntonio\Desktop\OffEE\Source Code\Mod\bin\Debug\Mod.pdb
+C:\Users\MarcoAntonio\Desktop\OffEE\Source Code\Mod\obj\Debug\Mod.csprojResolveAssemblyReference.cache
+C:\Users\MarcoAntonio\Desktop\OffEE\Source Code\Mod\obj\Debug\Mod.dll
+C:\Users\MarcoAntonio\Desktop\OffEE\Source Code\Mod\obj\Debug\Mod.pdb

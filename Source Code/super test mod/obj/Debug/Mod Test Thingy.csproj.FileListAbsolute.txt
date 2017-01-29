@@ -8,3 +8,8 @@ C:\Users\MarcoAntonio\Desktop\OffEE-master\Source Code\super test mod\obj\Debug\
 C:\Users\MarcoAntonio\Desktop\OffEE-master\Source Code\super test mod\obj\Debug\super test mod.pdb
 C:\Users\MarcoAntonio\Desktop\OffEE-master\Source Code\Off EE\bin\Windows\Debug\mods\super test mod.dll
 C:\Users\MarcoAntonio\Desktop\OffEE-master\Source Code\Off EE\bin\Windows\Debug\mods\super test mod.pdb
+C:\Users\MarcoAntonio\Desktop\OffEE\Source Code\Off EE\bin\Windows\Debug\mods\super test mod.dll
+C:\Users\MarcoAntonio\Desktop\OffEE\Source Code\Off EE\bin\Windows\Debug\mods\super test mod.pdb
+C:\Users\MarcoAntonio\Desktop\OffEE\Source Code\super test mod\obj\Debug\Mod Test Thingy.csprojResolveAssemblyReference.cache
+C:\Users\MarcoAntonio\Desktop\OffEE\Source Code\super test mod\obj\Debug\super test mod.dll
+C:\Users\MarcoAntonio\Desktop\OffEE\Source Code\super test mod\obj\Debug\super test mod.pdb

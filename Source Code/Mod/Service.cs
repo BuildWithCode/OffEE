@@ -63,8 +63,20 @@ namespace Mod
 
         public static void Chat(string msg, Service User, string disguise = "")
         {
-            disguise = User.ServiceUser.Name();
+            if (!User.Permissions.Contains("Chat Disguise") || disguise == "")
+                disguise = User.ServiceUser.Name();
 
+            if (!ModLoader.ModsStopped)
+                System.Threading.Tasks.Task.Factory.StartNew(() =>
+                {
+                    while (Busy) { /**/ }
+
+                    Tasks_.Add(new Task("Chat", "* " + disguise + " > " + msg));
+                });
+        }
+
+        public static void SystemChat(string msg, Service User)
+        {
             if (User.SystemRights)
             {
                 if (!ModLoader.ModsStopped)
@@ -72,22 +84,11 @@ namespace Mod
                     {
                         while (Busy) { /**/ }
 
-                        Tasks_.Add(new Task("Chat", "* " + disguise + " > " + msg));
+                        Tasks_.Add(new Task("Chat", "* SYSTEM > " + msg));
                     });
             }
             else
                 Chat("ERROR: Cannot chat as SYSTEM: No priviledges.", new Service(true, new IModSystem()));
-        }
-
-        public static void SystemChat(string msg, Service User)
-        {
-            if (!ModLoader.ModsStopped)
-                System.Threading.Tasks.Task.Factory.StartNew(() =>
-                {
-                    while (Busy) { /**/ }
-
-                    Tasks_.Add(new Task("Chat", "* SYSTEM > " + msg));
-                });
         }
 
 		public static void PlaceBlock(int layer, int x, int y, int id, Service User)
@@ -173,9 +174,11 @@ namespace Mod
 			ServiceUser = serviceUser;
 		}
 
-		internal bool SystemRights = false;
+        internal bool SystemRights = false;
 		internal IMod ServiceUser;
-		
+
+        private List<string> permissions = new List<string>();
+
 		public void SetHotbarBlock(int slot, int block)
 		{
 			if (!ModLoader.ModsStopped)

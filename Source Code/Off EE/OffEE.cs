@@ -545,6 +545,7 @@ namespace Off_EE
                     if (state.IsKeyDown(Keys.Y))
                     {
                         i.SystemPriviledgesGiven();
+                        Mod.ModLoader.GetSystemService(this, Mod.ModLoader.GetSystem(this)) = new Service(true, i);
 
                         ServiceHandler.Chat("System Priviledges Granted.", Mod.ModLoader.GetSystemService(this, Mod.ModLoader.GetSystem(this)));
                     }
@@ -604,6 +605,7 @@ namespace Off_EE
                     if (state.IsKeyDown(Keys.Y))
                     {
                         i.PermissionGranted(req);
+                        Mod.ModLoader.GetSystemService(this, Mod.ModLoader.GetSystem(this)).Permissions.Add(req);
 
                         ServiceHandler.Chat(answermsg + " Granted.", Mod.ModLoader.GetSystemService(this, Mod.ModLoader.GetSystem(this)));
                     }
