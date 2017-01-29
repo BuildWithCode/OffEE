@@ -178,6 +178,7 @@ namespace Mod
 		internal IMod ServiceUser;
 
         private List<string> permissions = new List<string>();
+        internal List<string> Permissions { get { return permissions; } }
 
 		public void SetHotbarBlock(int slot, int block)
 		{
